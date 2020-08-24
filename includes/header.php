@@ -1,6 +1,6 @@
 <?php
     const CSS_ASSETS_PATH = '/assets/css/';
-    const IMAGE_ASSETS_PATH = '/assets/img';
+    const IMAGE_ASSETS_PATH = '/assets/img/';
 ?>
 <!DOCTYPE HTML>
 <html class="no-js">

@@ -27,6 +27,7 @@ $this->need('includes/header.php');
                     </section>
                 </div>
                 <?php endwhile; ?>
+                <?php $this->pageNav('<< 上一页', '下一页 >>'); ?>
             </div>
             <?php $this->need('includes/footer.php'); ?>
         </div>
