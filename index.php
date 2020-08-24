@@ -8,128 +8,27 @@ $this->need('includes/header.php');
         <div class="main_container">
             <?php $this->need('includes/banner.php'); ?>
             <div class="main_content">
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
-                维护中<br/>
+                <?php while($this->next()): ?>
+                <div class="content_item">
+                    <div class="content_img">
+                        <img src="https:\/\/tva2.sinaimg.cn\/large\/0072Vf1pgy1foxk7mecohj31hc0u048p.jpg" alt="" />
+                    </div>
+                    <section class="content_section">
+                        <h2 class="post-title" itemprop="name headline"><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
+                        <div class="post-meta">
+                            <p itemprop="author" itemscope itemtype="http://schema.org/Person"><?php _e('作者: '); ?><a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></p>
+                            <p><?php _e('时间: '); ?><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></p>
+                            <p><?php _e('分类: '); ?><?php $this->category(','); ?></p>
+                            <p itemprop="interactionCount"><a itemprop="discussionUrl" href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('评论', '1 条评论', '%d 条评论'); ?></a></p>
+                        </div>
+                        <div class="post-content" itemprop="articleBody">
+                            <?php $this->content('- 阅读剩余部分 -'); ?>
+                        </div>
+                    </section>
+                </div>
+                <?php endwhile; ?>
             </div>
+            <?php $this->need('includes/footer.php'); ?>
         </div>
-        <?php $this->need('includes/footer.php'); ?>
     </div>
 </body>

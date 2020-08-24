@@ -6,10 +6,17 @@ html,body{
     width: 100%;
     height: 100%;
     overflow: hidden;
+    font-family: "Microsoft YaHei UI";
+    font-size: 0.9rem;
+    color: #525f7f;
 }
 body::after{
     content: '';
     display: block;
+}
+a,a:hover{
+    text-decoration: none;
+    color: #525f7f;
 }
 .page_sidebar{
     width: 300px;
@@ -34,11 +41,31 @@ body::after{
     height: 100%;
     overflow-y: scroll;
     position: relative;
-    background-image: url("../img/bg.jpg");
-    background-repeat:no-repeat;
-    background-size:100% 100%;
-    -moz-background-size:100% 100%;
+    background-image: url(//www.cnblogs.com/skins/BlueSky/images/bg.gif);
+    background-repeat: repeat;
 }
+/*.main_container:before{*/
+/*    content: '';*/
+/*    display: block;*/
+/*    position: fixed;*/
+/*    z-index: -1;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    margin-left: 300px;*/
+/*    background-image: url("../img/bg.jpg");*/
+/*    background-repeat:no-repeat;*/
+/*    background-size:100% 100%;*/
+/*    -moz-background-size:100% 100%;*/
+/*    -webkit-filter: blur(2px);*/
+/*    -moz-filter: blur(2px);*/
+/*    -ms-filter: blur(2px);*/
+/*    -o-filter: blur(2px);*/
+/*    filter: blur(2px);*/
+/*}*/
 .main_container::-webkit-scrollbar {
     /*滚动条整体样式*/
     width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
@@ -66,23 +93,86 @@ body::after{
     border-radius: 10px;
 }
 .main_banner{
-    height: 500px;
+    height: 400px;
     width: 100%;
     background-color: dodgerblue;
 }
 .main_content{
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    margin: 350px auto 0 auto;
-    width: 60%;
-    background-color: #cccccc;
+    margin: -125px auto 100px auto;
+    width: 80%;
+    z-index: 2;
+}
+.content_item{
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    overflow:hidden;
+}
+.content_img{
+    width: 100%;
+    height: 180px;
+    margin-bottom: 50px;
+}
+.content_img img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.content_section{
+    width: 80%;
+    margin: 0 auto;
+}
+.content_section>.post-title{
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+.content_section>.post-meta{
+    margin-bottom: 1.5rem;
+}
+.content_section>.post-meta>p{
+    float: left;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #888;
+}
+.content_section>.post-meta:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.content_section>.post-content{
+    color: #525f7f;
+    font-size: 1.2rem;
+}
+.content_section{
+    margin-bottom: 80px;
 }
 .page_footer{
-    position: absolute;
-    bottom: 0;
-    height: 50px;
+    position: relative;
+    height: 100px;
     width: 100%;
-    background-color: #c2c2c2;
+    background-color: #f9f9f9;
+    box-shadow: 15px 15px 35px #525f7f;
+    /*border: 1px solid #cccccc;*/
+    text-align: center;
+}
+.footer_content{
+    position: absolute;
+    width: 100%;
+    /*height: 100%;*/
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.footer_content > p{
+    margin: 5px auto;
+}
+.footer_content > .copyright {
+    font-weight: bold;
+}
+.footer_content > .copyright > a{
+    font-weight: normal;
 }
