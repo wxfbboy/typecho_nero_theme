@@ -194,11 +194,11 @@ a,a:hover{
     color: #888;
 }
 .main_content{
-    margin: 0px auto 100px auto;
+    margin: 0px auto 0px auto;
     transform: translateY(-10%);
     width: 80%;
     z-index: 2;
-    min-height: 32.6vh;
+    min-height: 50vh;
 }
 .content_item{
      width: 100%;
