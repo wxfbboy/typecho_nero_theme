@@ -10,7 +10,7 @@ $this->need('includes/header.php');
         <div class="main_content">
             <div class="content_item">
                 <section class="content_section">
-<!--                    <h2 class="post-title" itemprop="name headline"><a itemprop="url" href="--><?php //$this->permalink() ?><!--">--><?php //$this->title() ?><!--</a></h2>-->
+                    <!--                    <h2 class="post-title" itemprop="name headline"><a itemprop="url" href="--><?php //$this->permalink() ?><!--">--><?php //$this->title() ?><!--</a></h2>-->
                     <div class="post-content" itemprop="articleBody">
                         <?php $this->content(); ?>
                     </div>

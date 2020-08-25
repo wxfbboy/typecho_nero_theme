@@ -162,6 +162,7 @@ a,a:hover{
     border-radius: 10px;
 }
 .main_banner{
+    position: relative;
     height: 400px;
     width: 100%;
     /*box-shadow: 15px 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);*/
@@ -172,9 +173,29 @@ a,a:hover{
     height: 100%;
     object-fit:cover;
 }
+.main_banner>.banner_info{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.main_banner>.banner_info>h2{
+    font-size: 3em;
+    letter-spacing: 0.12em;
+}
+.main_banner>.banner_info>.post-meta{
+    margin-top: 1.5rem;
+}
+.main_banner>.banner_info>.post-meta>p{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #888;
+}
 .main_content{
     margin: 0px auto 100px auto;
-    transform: translateY(-35%);
+    transform: translateY(-10%);
     width: 80%;
     z-index: 2;
 }
@@ -212,14 +233,14 @@ a,a:hover{
 .post_main>.main_container>.main_content>.content_item>.content_section>.post-title{
     font-size: 2.5rem;
     font-weight: 400;
-    margin-bottom: 3.5rem;
-    text-align: center;
+    margin-bottom: 1.5rem;
+    text-align: left;
 }
 .content_section>.post-meta{
     margin-bottom: 1.5rem;
 }
 .post_main>.main_container>.main_content>.content_item>.content_section>.post-meta{
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
     text-align: center;
 }
 .content_section>.post-meta>p{
@@ -228,12 +249,8 @@ a,a:hover{
     font-size: 1rem;
     color: #888;
 }
-.content_section>.post-meta:after{
-    content: '';
-    display: block;
-    clear: both;
-}
 .content_section>.post-content{
+    text-indent:2em;
     color: #525f7f;
     font-size: 1.2rem;
 }
