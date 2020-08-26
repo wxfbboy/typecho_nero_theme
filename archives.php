@@ -1,4 +1,9 @@
 <?php
+/**
+ * 文章归档页
+ *
+ * @package custom
+ */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/header.php');
 ?>
@@ -12,7 +17,12 @@ $this->need('includes/header.php');
                 <section class="content_section">
                     <!--                    <h2 class="post-title" itemprop="name headline"><a itemprop="url" href="--><?php //$this->permalink() ?><!--">--><?php //$this->title() ?><!--</a></h2>-->
                     <div class="post-content" itemprop="articleBody">
-                        <?php $this->content(); ?>
+                        <div class="timeline_container">
+<!--                            <ul>-->
+<!--                                <li><a href="{permalink}">{date}</a></li>-->
+<!--                            </ul>-->
+                            <?php endwhile; ?>
+                        </div>
                     </div>
                 </section>
             </div>

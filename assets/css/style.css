@@ -251,10 +251,16 @@ a,a:hover{
     color: #888;
 }
 .content_section>.post-content{
-    text-indent:2em;
     color: #525f7f;
     font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
 }
+.timeline_container{
+    width: 100%;
+    height: 100%;
+}
+
 .page_footer{
     position: relative;
     height: 100px;
