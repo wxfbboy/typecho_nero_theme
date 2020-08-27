@@ -22,6 +22,7 @@ $this->need('includes/header.php');
                     </div>
                 </section>
             </div>
+            <?php $this->need('includes/comments.php'); ?>
         </div>
         <?php $this->need('includes/footer.php'); ?>
     </div>
