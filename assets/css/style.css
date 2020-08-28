@@ -231,21 +231,32 @@ a,a:hover{
     box-sizing: border-box;
     margin-bottom: 3rem;
 }
-.comment_list_section>ul{
+.comment_list_section>ul,.comment-children{
     list-style-type: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+.comment-children{
+    padding-left: 4rem;
+}
+.comment-child>ul>li{
+    padding-top: 4rem;
     width: 100%;
 }
 .comment_list_section>ul>li{
     padding: 2rem 0;
     width: 100%;
 }
-.comment_list_section>ul>li:after{
+.comment-content{
+    width: 100%;
+}
+.comment-content>div{
+    float: left;
+}
+.comment-content:after{
     content: '';
     display: block;
     clear: both;
-}
-.comment_list_section>ul>li>div{
-    float: left;
 }
 .comment_avatar>.avatar{
     border-radius: 50%;
@@ -277,6 +288,7 @@ a,a:hover{
     padding: 0.5rem 0;
     font-weight: 800;
 }
+
 .comment_list_section>h2{
     font-size: 2rem;
     text-align: center;

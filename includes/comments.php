@@ -1,22 +1,63 @@
+<?php function threadedComments($comments){ ?>
+            <li id="<?php $comments->theId(); ?>" class="comment-body<?php
+            if ($comments->levels > 0) {
+                echo ' comment-child';
+                $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
+            } else {
+                echo ' comment-parent';
+            }
+            $comments->alt(' comment-odd', ' comment-even');
+            echo $commentClass;
+            ?>">
+                <div class="comment-content">
+                    <div class="comment_avatar">
+                        <?php $comments->gravatar('70', ''); ?>
+                    </div>
+                    <div class="comment_right">
+                        <div class="comment_data">
+                            <span class="comment_author"><?php $comments->author(); ?></span>
+                            <span class="comment_time"> · <?php $comments->date('Y-m-d'); ?> <?php $comments->date('h:i a'); ?></span>
+                        </div>
+                        <div class="comment_body"><?php $comments->content(); ?></div>
+                        <div class="comment-reply"><i class="fa fa-reply" aria-hidden="true"></i>&nbsp;&nbsp;<?php $comments->reply(); ?></div>
+                    </div>
+                </div>
+                <?php if ($comments->children) { ?>
+                    <div class="comment-child">
+                        <ul class="comment-children">
+                            <?php $comments->threadedComments($options); ?>
+                        </ul>
+                    </div>
+                <?php } ?>
+        <?php } ?>
     <div class="content_item">
         <?php $this->comments()->to($comments); ?>
         <?php if ($comments->have()): ?>
             <section class="comment_list_section">
                 <h2><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h2>
-                <ul id="comment_list">
+                <ul class="comment_list">
                 <?php while($comments->next()): ?>
                     <li id="<?php $comments->theId(); ?>">
-                        <div class="comment_avatar">
-                            <?php $comments->gravatar('70', ''); ?>
-                        </div>
-                        <div class="comment_right">
-                            <div class="comment_data">
-                                <span class="comment_author"><?php $comments->author(); ?></span>
-                                <span class="comment_time"> · <?php $comments->date('Y-m-d'); ?> <?php $comments->date('h:i a'); ?></span>
+                        <div class="comment-content">
+                            <div class="comment_avatar">
+                                <?php $comments->gravatar('70', ''); ?>
                             </div>
-                            <div class="comment_body"><?php $comments->content(); ?></div>
-                            <div class="comment-reply"><i class="fa fa-reply" aria-hidden="true"></i>&nbsp;&nbsp;<?php $comments->reply(); ?></div>
+                            <div class="comment_right">
+                                <div class="comment_data">
+                                    <span class="comment_author"><?php $comments->author(); ?></span>
+                                    <span class="comment_time"> · <?php $comments->date('Y-m-d'); ?> <?php $comments->date('h:i a'); ?></span>
+                                </div>
+                                <div class="comment_body"><?php $comments->content(); ?></div>
+                                <div class="comment-reply"><i class="fa fa-reply" aria-hidden="true"></i>&nbsp;&nbsp;<?php $comments->reply(); ?></div>
+                            </div>
                         </div>
+                        <?php if ($comments->children) { ?>
+                            <div class="comment-child">
+                                <ul class="comment-children">
+                                    <?php $comments->threadedComments($options); ?>
+                                </ul>
+                            </div>
+                        <?php } ?>
                     </li>
                 <?php endwhile; ?>
                 </ul>
