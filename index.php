@@ -11,7 +11,7 @@ $this->need('includes/header.php');
                 <?php while($this->next()): ?>
                 <div class="content_item">
                     <div class="content_img">
-                        <img src="https:\/\/tva2.sinaimg.cn\/large\/0072Vf1pgy1foxk7mecohj31hc0u048p.jpg" alt="" />
+                        <img src="https://random.52ecy.cn/randbg.php" alt="" />
                     </div>
                     <section class="content_section">
                         <h2 class="post-title" itemprop="name headline"><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>

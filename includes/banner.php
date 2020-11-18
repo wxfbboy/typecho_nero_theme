@@ -1,5 +1,7 @@
 <div class="main_banner">
-    <img src="<?php $this->options->themeUrl(IMAGE_ASSETS_PATH.'banner.jpg'); ?>" />
+<!--    <img src="--><?php //$this->options->themeUrl(IMAGE_ASSETS_PATH.'banner.jpg'); ?><!--" />-->
+<!--    <img src="https://tva1.sinaimg.cn/large/0075auPSgy1fqnv4uwlxmj31kw0zt7wh" />-->
+    <img src="https://tva1.sinaimg.cn/large/0075auPSly1fqb5i04axbj31hc0vi7gj" />
     <div class="banner_info">
     <?php if($this->is('category') || $this->is('search') || $this->is('tag') || $this->is('author')): ?>
         <h2><?php $this->archiveTitle(array(
