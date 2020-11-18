@@ -10,9 +10,9 @@ $this->need('includes/header.php');
             <div class="main_content">
                 <?php while($this->next()): ?>
                 <div class="content_item">
-                    <div class="content_img">
-                        <img src="https://random.52ecy.cn/randbg.php" alt="" />
-                    </div>
+<!--                    <div class="content_img">-->
+<!--                        <img src="https://random.52ecy.cn/randbg.php" alt="" />-->
+<!--                    </div>-->
                     <section class="content_section">
                         <h2 class="post-title" itemprop="name headline"><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
                         <div class="post-meta">

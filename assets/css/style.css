@@ -21,24 +21,28 @@ a,a:hover{
 .page_sidebar{
     width: 220px;
     height: 100%;
-    background-color: #525f7f;
+    /*background-color: #525f7f;*/
+    background-color: #ffffff;
     position: fixed;
     top:0;
     left: 0;
     box-sizing:  border-box;
     box-shadow: 15px 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
     z-index: 2;
-    color: #ffffff;
+    /*color: #ffffff;*/
+    color: #002f56;
 }
 .page_sidebar a,.page_sidebar a:hover{
     text-decoration: none;
-    color: #ffffff;
+    /*color: #ffffff;*/
+    color: #957071;
 }
 .sidebar_profile{
     position: relative;
     height: 220px;
     width: 100%;
-    background-color: #5D677F;
+    /*background-color: #5D677F;*/
+    background-color: #ffffff;
 }
 .sidebar_profile>.sidebar_avatar{
     height:140px;
@@ -51,14 +55,15 @@ a,a:hover{
 .sidebar_profile>.sidebar_avatar>img{
     height: 100%;
     width: 100%;
-    border: 5px solid #ffffff;
+    /*border: 5px solid #ffffff;*/
+    border: 5px solid rgba(224,224,244,0.6);
     border-radius: 50%;
 }
 .sidebar_logo{
     text-align: right;
     width: 95%;
     /*border-bottom: 1px solid #191970;*/
-    border-bottom: 1px solid #3D507F;
+    /*border-bottom: 1px solid #3D507F;*/
     padding-right: 0.5rem;
     margin: .8rem auto 0 auto;
     box-sizing: border-box;
@@ -92,7 +97,8 @@ a,a:hover{
 
 .sidebar_navigation>ul>a:hover>li{
     padding: 1.35rem 1rem 1.2rem 0;
-    background-color: #3E475F;
+    /*background-color: #3E475F;*/
+    background-color: #e0e0e0;
     font-size: 1rem;
 }
 
@@ -110,8 +116,9 @@ a,a:hover{
     height: 100%;
     overflow-y: scroll;
     position: relative;
-    background-image: url(//www.cnblogs.com/skins/BlueSky/images/bg.gif);
-    background-repeat: repeat;
+    /*background-image: url(//www.cnblogs.com/skins/BlueSky/images/bg.gif);*/
+    /*background-repeat: repeat;*/
+    background-color: rgba(194,194,194,0.2);
 }
 /*.main_container:before{*/
 /*    content: '';*/
@@ -414,7 +421,9 @@ a,a:hover{
 }
 .content_section{
     width: 80%;
-    margin: 30px auto 80px auto;
+    margin: 40px auto 60px auto;
+    /*要显示每列的动漫图头部再开启这个*/
+    /*margin: 30px auto 80px auto;*/
 }
 .post_main>.main_container>.main_content>.content_item>.content_section{
     width: 80%;
